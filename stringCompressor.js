@@ -1,11 +1,11 @@
-// function userInput(message){
-// 	if(message != null){
-// 		return prompt(message);
-// 	}
-// 	else{
-// 		return prompt("Enter user input:");
-// 	}
-// }
+function userInput(message){
+	if(message != null){
+		return prompt(message);
+	}
+	else{
+		return prompt("Enter user input:");
+	}
+}
 
 function stringCompressor(string){
 	var output = [];
@@ -25,6 +25,20 @@ function stringCompressor(string){
 	return output;
 }
 
+function concatonateArrayToCommalessString(array){
+	var outputString = "";
+	for (var i = 0; i < array.length; i++) {
+		outputString = outputString.concat(array[i])
+	}
+	return outputString;
 
-var x = "aaabbccccd";
-console.log(stringCompressor(x));
+}
+
+function runStringCompressor(){
+	var output = userInput();
+	output = stringCompressor(output);
+	output = concatonateArrayToCommalessString(output);
+	return output;
+}
+
+alert(runStringCompressor());
